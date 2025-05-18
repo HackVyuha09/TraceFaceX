@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TraceFace X - Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #111;
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        color: #eee;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .masthead {
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+      .masthead h3 {
+        color: red;
+        margin: 0;
+        font-size: 28px;
+      }
+
+      .navbar a {
+        color: #eee;
+        text-decoration: none;
+        padding: 12px;
+        display: inline-block;
+        font-weight: bold;
+        background-color: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 5px;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .card {
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #333;
+      }
+
+      .half {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 10px;
+        background-color: #222;
+        border: 1px solid #444;
+        color: #eee;
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: red;
+        border: none;
+        color: #111;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      iframe {
+        border: none;
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 30px 0;
+        font-size: 14px;
+        color: #888;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <h3>TraceFace X</h3>
+        <div class="navbar">
+          <a href="index.html">Home</a>
+          <a href="#">Contact Support</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="half card">
+          <h4>Security Operations Support</h4>
+          <p>
+            Phone: <a href="tel:+919999999999" style="color: red;">+91 99999 99999</a><br />
+            Email: <a href="mailto:support@tracefacex.com" style="color: red;">support@tracefacex.com</a>
+          </p>
+
+          <h4>Technical Team</h4>
+          <p>
+            Phone: <a href="tel:+918888888888" style="color: red;">+91 88888 88888</a><br />
+            Email: <a href="mailto:tech@tracefacex.com" style="color: red;">tech@tracefacex.com</a>
+          </p>
+
+          <p>
+            Need help identifying a suspect or configuring live feeds? Reach out directly or submit your request using the form.
+          </p>
+        </div>
+
+        <div class="half card">
+          <h4>Contact Us</h4>
+          <form>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Officer Name" />
+
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" placeholder="Contact Number" />
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="e.g. Suspect Alert Assistance" />
+
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Details about your query or alert request"></textarea>
+
+            <button type="submit">Send Request</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="card" style="width: 100%;">
+          <h4>Our Command Center</h4>
+          <iframe
+            src="https://maps.google.com/maps?q=Delhi%20India&t=&z=13&ie=UTF8&iwloc=&output=embed">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy; 2025 TraceFace X Surveillance | All rights reserved</p>
+      </div>
+    </div>
+  </body>
+</html>

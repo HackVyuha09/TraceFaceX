@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TraceFace X – Surveillance Redefined</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --black: #000;
+      --red: #e50914;
+      --white: #fff;
+      --gray: #1a1a1a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1581092795360-1ba3a06d2c5a?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      padding: 4rem 2rem;
+      text-align: center;
+      color: white;
+      border-bottom: 2px solid red;
+    }
+
+    header h3 {
+      font-size: 2.5rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header p {
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
+      max-width: 700px;
+      color: #d0e6ff;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header-buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .button {
+      background-color: #e50914;
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 999px;
+      font-size: 1.1rem;
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #c40810;
+    }
+
+    .button-outline {
+      background-color: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    .button-outline:hover {
+      background-color: #fff;
+      color: #e50914;
+    }
+
+    nav {
+      background-color: var(--black);
+      padding: 1rem 2rem;
+      height: 220px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0;
+      z-index: 1;
+    }
+
+    nav ul li a {
+      color: var(--white);
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--red);
+      text-decoration: underline;
+    }
+
+    .nav-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 0;
+    }
+
+    .nav-center h1 {
+      color: var(--red);
+      font-size: 50px;
+      margin: 0;
+    }
+
+    .nav-center p {
+      color: var(--white);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      color: var(--red);
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--gray);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1rem;
+    }
+
+    .card strong {
+      color: var(--red);
+    }
+
+    footer {
+      background: var(--gray);
+      text-align: center;
+      padding: 2rem;
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#technology">Technology</a></li>
+    </ul>
+
+    <div class="nav-center">
+      <h1>TraceFace X</h1>
+      <p>"Cameras watch. TraceFace X never forgets."</p>
+    </div>
+
+    <a href="/login" class="button">Sign Up</a>
+  </nav>
+
+  <header>
+    <img src="{{ url_for('static', filename='cctv.png') }}" alt="Hero Image" />
+    <h3>TraceFace X – Surveillance Redefined</h3>
+    <p>Your go-to solution for real-time, high-accuracy facial recognition across multiple cameras.</p>
+    <div class="header-buttons">
+      <a href="/index1" class="button">Start Free</a>
+      <a href="/contact-us" class="button button-outline">Contact Us</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">From Cities to Stores – TraceFace X Delivers</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/50/fa314a/office.png" alt="Smart Workplaces" />
+        🏢 Smart Workplaces<br><small>Track productivity and identity across rooms</small>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/50/fa314a/police-badge.png" alt="Security" />
+        🚨 Surveillance & Security<br><small>Catch suspects even if they move across cameras</small>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/50/fa314a/city.png" alt="Smart Cities" />
+        🏙️ Smart Cities<br><small>Unified person tracking across CCTV grids</small>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/50/fa314a/shopping-cart.png" alt="Retail" />
+        🛍️ Retail Analytics<br><small>Repeat customer detection and demographic stats</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color: #1c1c1c;">
+    <h2 class="section-title">Built for Developers</h2>
+    <div class="grid">
+      <div class="card">📡 REST API Access<br><small>Easy endpoints for face add, detect, match</small></div>
+      <div class="card">🐍 Python SDK<br><small>Lightweight Python library to integrate in minutes</small></div>
+      <div class="card">🐳 Docker Support<br><small>Run it anywhere – from edge devices to servers</small></div>
+      <div class="card">📊 JSON Logs & Dashboard<br><small>Access real-time logs & insights</small></div>
+    </div>
+  </section>
+
+  <!-- KEEP THIS SINGLE "Why TraceFace X?" SECTION -->
+  <section class="section" style="background-color: #000; color: white; text-align: center;">
+    <h2 class="section-title" style="color: red;">Why TraceFace X?</h2>
+    <p style="max-width: 700px; margin: 0 auto 3rem auto; font-size: 1.1rem;">
+      Trusted by surveillance professionals for its unmatched accuracy, adaptability, and real-time speed. Here's what makes TraceFace X powerful:
+    </p>
+
+    <div class="grid" style="gap: 2rem; max-width: 900px; margin: 0 auto; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+      <div class="card" style="background-color: #111; border: 1px solid red; color: white;">
+        <img src="https://img.icons8.com/ios/64/fa314a/conference-call.png" alt="Unlimited Faces">
+        <h3 style="color: red;">Unlimited Face Recognition</h3>
+        <p>Identify and track countless individuals across cameras without loss of accuracy.</p>
+      </div>
+      <div class="card" style="background-color: #111; border: 1px solid red; color: white;">
+        <img src="https://img.icons8.com/ios-filled/64/fa314a/camera.png" alt="Scene Adaptability">
+        <h3 style="color: red;">Scene Adaptability</h3>
+        <p>Handles diverse lighting, occlusion, camera angles, and crowd densities effortlessly.</p>
+      </div>
+      <div class="card" style="background-color: #111; border: 1px solid red; color: white;">
+        <img src="https://img.icons8.com/ios-filled/64/fa314a/speed.png" alt="Fast & Accurate">
+        <h3 style="color: red;">Fast & Accurate</h3>
+        <p>Achieves millisecond-level face matching with industry-leading precision.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color: #111; color: white; text-align: center;">
+    <h2 class="section-title" style="color: red;">Live Demo</h2>
+    <p style="max-width: 700px; margin: auto; font-size: 1.1rem;">
+      Experience real-time facial recognition across camera feeds. Click below to connect with our live Flask API and watch TraceFace X in action.
+    </p>
+    <section class="section" style="text-align: center; max-width: 600px; margin: 2rem auto; background: #111; padding: 2rem; border-radius: 1rem;">
+        <p style="color: white; margin-bottom: 1rem; font-family: 'Open Sans', sans-serif;">Try a live camera demo or upload a picture for face recognition.</p>
+        
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="/index1" class="button">Try Live Camera Demo</a>
+          <a href="/upload" class="button">Upload Picture</a>
+          <input type="file" id="upload-photo" accept="image/*" style="display: none;" onchange="handleImageUpload(event)" />
+        </div>
+      </section>
+      
+      <script>
+        function handleImageUpload(event) {
+          const file = event.target.files[0];
+          if (file) {
+            alert('Uploaded file: ' + file.name);
+            // Upload logic here
+          }
+        }
+      </script>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Infinite Loop | HackVyuha | Built with ❤ by Team 1018</p>
+  </footer>
+
+</body>
+</html>

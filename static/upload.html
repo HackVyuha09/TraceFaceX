@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <section class="section" style="padding: 4rem 1rem; background-color: #000; color: #fff; text-align: center;">
+        <h2 style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; color: #fa314a; font-family: 'Poppins', sans-serif;">
+          Try Face Detection
+        </h2>
+        <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.2rem; font-weight: 500; color: #ccc; font-family: 'Poppins', sans-serif;">
+          Try Face Detection now by uploading a local image or entering an image URL.<br>
+          This demo is powered by our Detect API. For custom use cases, check documentation or contact us.
+        </p>
+      
+      <!-- Image Preview Placeholder -->
+<div style="width: 320px; height: 200px; background-color: #1a1a1a; border: 2px dashed #fa314a; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+    <img id="previewImage" src="cctv.png" alt="Image preview" style="max-width: 100%; max-height: 100%;" />
+  </div>
+  
+          
+        <!-- Upload + URL Input Controls -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; align-items: center;">
+          
+          <!-- Upload Button -->
+          <div>
+            <input type="file" id="upload-photo" accept="image/*" style="display: none;" />
+            <label for="upload-photo" style="
+              background-color: red;
+              color: white;
+              font-size: 1rem;
+              padding: 0.8rem 2rem;
+              border-radius: 999px;
+              cursor: pointer;
+              transition: 0.3s ease;
+              font-family: 'Poppins', sans-serif;
+              display: inline-block;
+            ">Upload Picture</label>
+          </div>
+      
+          <!-- URL Input + Go Button -->
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <input type="text" placeholder="Enter image URL" style="
+              padding: 0.8rem 1rem;
+              border-radius: 999px;
+              border: 1px solid #ccc;
+              width: 220px;
+              font-size: 1rem;
+              outline: none;
+              font-family: 'Poppins', sans-serif;
+            " />
+            <button style="
+              background-color: red;
+              color: white;
+              font-size: 1rem;
+              padding: 0.8rem 1.5rem;
+              border-radius: 999px;
+              border: none;
+              cursor: pointer;
+              font-family: 'Poppins', sans-serif;
+            ">Go</button>
+          </div>
+        </div>
+      </section>
+      <footer style="
+  background: #1e1e1e;
+  color: #aaa;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+">
+  <p>&copy; 2025 Infinite Loop | HackVyuha</p>
+  <p>Built with ❤ by Team 1018</p>
+</footer>
+
+
+     
+</body>
+</html>

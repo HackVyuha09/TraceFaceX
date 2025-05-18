@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TraceFace X – Surveillance Redefined</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #000;
+      --red: #e50914;
+      --white: #fff;
+      --gray: #1a1a1a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: var(--black);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0;
+      z-index: 1;
+    }
+
+    nav ul li a {
+      color: var(--white);
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--red);
+      text-decoration: underline;
+    }
+
+    .nav-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 0;
+    }
+
+    .nav-center h1 {
+      color: var(--red);
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .nav-center p {
+      color: var(--white);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .button {
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+      background: var(--red);
+      color: var(--white);
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      z-index: 1;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #c40810;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      color: var(--red);
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--gray);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2);
+    }
+
+    .card strong {
+      color: var(--red);
+    }
+
+    footer {
+      background: var(--gray);
+      text-align: center;
+      padding: 2rem;
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <!-- Left Nav Links -->
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#technology">Technology</a></li>
+    </ul>
+
+    <!-- Center Logo -->
+    <div class="nav-center">
+      <h1>TraceFace X</h1>
+      <p>"Cameras watch. TraceFace X never forgets."</p>
+    </div>
+
+    <!-- Right Button -->
+    <a href="#signup" class="button">Sign Up</a>
+  </nav>
+
+  <!-- Sections -->
+  <section class="section" style="background-color: #111;">
+    <h2 class="section-title">Why Choose TraceFace X?</h2>
+    <div class="grid">
+      <div class="card">🚀 Real-Time Face Matching<br><small>Sub-100ms latency powered by Kafka + Redis</small></div>
+      <div class="card">🧠 Memory Retention<br><small>Cross-camera identity tracking using vector DB</small></div>
+      <div class="card">🌐 Easy API Integration<br><small>Plug-and-play REST APIs and SDKs</small></div>
+      <div class="card">🛡️ Secure & Private<br><small>On-prem & encrypted options for security-sensitive orgs</small></div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <h2 class="section-title">Industry Applications</h2>
+    <div class="grid">
+      <div class="card">🏢 Smart Workplaces<br><small>Track productivity and identity across rooms</small></div>
+      <div class="card">🚨 Surveillance & Security<br><small>Catch suspects even if they move across cameras</small></div>
+      <div class="card">🏙️ Smart Cities<br><small>Unified person tracking across CCTV grids</small></div>
+      <div class="card">🛍️ Retail Analytics<br><small>Repeat customer detection and demographic stats</small></div>
+    </div>
+  </section>
+  
+  <section class="section" style="background-color: #1c1c1c;">
+    <h2 class="section-title">Built for Developers</h2>
+    <div class="grid">
+      <div class="card">📡 REST API Access<br><small>Easy endpoints for face add, detect, match</small></div>
+      <div class="card">🐍 Python SDK<br><small>Lightweight Python library to integrate in minutes</small></div>
+      <div class="card">🐳 Docker Support<br><small>Run it anywhere – from edge devices to servers</small></div>
+      <div class="card">📊 JSON Logs & Dashboard<br><small>Access real-time logs & insights</small></div>
+    </div>
+  </section>
+  <section class="section" style="background-color: #000; color: white; text-align: center;">
+    <h2 class="section-title" style="color: red;">Why TraceFace X?</h2>
+    <p style="max-width: 700px; margin: 0 auto 3rem auto; font-size: 1.1rem;">
+      Trusted by surveillance professionals for its unmatched accuracy, adaptability, and real-time speed. Here's what makes TraceFace X powerful:
+    </p>
+  
+    <div class="grid" style="gap: 2rem; max-width: 900px; margin: 0 auto; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+      
+        <div class="card" style="background-color: #111; border: 1px solid red; color: white; padding: 2rem; display: flex; flex-direction: column; align-items: center;">
+            <img src="https://img.icons8.com/ios/64/fa314a/conference-call.png" alt="Unlimited Faces" style="margin-bottom: 1rem; width: 64px; height: 64px;">
+            <h3 style="color: red; margin-bottom: 0.5rem;">Unlimited Face Recognition</h3>
+            <p>Identify and track countless individuals across cameras without loss of accuracy.</p>
+          </div>          
+  
+      <div class="card" style="background-color: #111; border: 1px solid red; color: white; padding: 2rem; display: flex; flex-direction: column; align-items: center;">
+        <img src="https://img.icons8.com/ios-filled/64/fa314a/camera.png" alt="Scene Adaptability" style="margin-bottom: 1rem; width: 64px; height: 64px;">
+        <h3 style="color: red; margin-bottom: 0.5rem;">Scene Adaptability</h3>
+        <p>Handles diverse lighting, occlusion, camera angles, and crowd densities effortlessly.</p>
+      </div>
+  
+      <div class="card" style="background-color: #111; border: 1px solid red; color: white; padding: 2rem; display: flex; flex-direction: column; align-items: center;">
+        <img src="https://img.icons8.com/ios-filled/64/fa314a/speed.png" alt="Fast & Accurate" style="margin-bottom: 1rem; width: 64px; height: 64px;">
+        <h3 style="color: red; margin-bottom: 0.5rem;">Fast & Accurate</h3>
+        <p>Achieves millisecond-level face matching with industry-leading precision.</p>
+      </div>
+  
+      <div class="card" style="background-color: #111; border: 1px solid red; color: white; padding: 2rem; display: flex; flex-direction: column; align-items: center;">
+        <img src="https://img.icons8.com/ios-filled/64/fa314a/trophy.png" alt="Award Winning" style="margin-bottom: 1rem; width: 64px; height: 64px;">
+        <h3 style="color: red; margin-bottom: 0.5rem;">Award-Winning Tech</h3>
+        <p>Backed by open-source leaders and praised in innovation challenges worldwide.</p>
+      </div>
+  
+    </div>
+  </section>
+  
+  <section class="section" style="background-color: #111; color: white; text-align: center;">
+    <h2 class="section-title" style="color: red;">Live Demo</h2>
+    <p style="max-width: 700px; margin: auto; font-size: 1.1rem;">
+      Experience real-time facial recognition across camera feeds. Click below to connect with our live Flask API and watch TraceFace X in action.
+    </p>
+    <section class="section" style="text-align: center; max-width: 600px; margin: 2rem auto; background: #111; padding: 2rem; border-radius: 1rem;">
+        <p style="color: white; margin-bottom: 1rem; font-family: 'Open Sans', sans-serif;">Try a live camera demo or upload a picture for face recognition.</p>
+        
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="index1.html" class="button" style="
+            background-color: red;
+            color: white;
+            font-size: 1rem;
+            padding: 0.8rem 2rem;
+            border-radius: 999px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+          ">Try Live Camera Demo</a>
+          
+          <a href="upload.html" class="button" style="
+          background-color: red;
+          color: white;
+          font-size: 1rem;
+          padding: 0.8rem 2rem;
+          border-radius: 999px;
+          display: inline-block;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-family: 'Poppins', sans-serif;
+          text-decoration: none;
+        ">Upload Picture</a>
+        
+          
+          <input type="file" id="upload-photo" accept="image/*" style="display: none;" onchange="handleImageUpload(event)" />
+        </div>
+      </section>
+      
+      <script>
+        function handleImageUpload(event) {
+          const file = event.target.files[0];
+          if (file) {
+            alert('Uploaded file: ' + file.name);
+            // Here you can add your file upload or preview logic
+          }
+        }
+      </script>
+      
+  </section>
+  
+  <footer class="footer">
+    <p>&copy; 2025 Infinite Loop | HackVyuha | Built with ❤ by Team 1018</p>
+  </footer>
+
+</body>
+</html>
